@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3"
+      crossorigin="anonymous"
+    />
+
+    <link rel="stylesheet" href="style.css" />
+    <script src="script.js" defer></script>
+
+    <title>Concerts</title>
+  </head>
+
+  <body>
+    <div class="container">
+      <div class="heading">
+        <h1>Explore Concerts</h1>
+        <p>Instantly see all of your favorite artist and their concerts</p>
+      </div>
+      <div class="searchContainer">
+        <div class="search">
+          <img
+            class="placeholderSearch"
+            src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeCAYAAAA7MK6iAAAAAXNSR0IArs4c6QAAApxJREFUSEvllkuIjmEUx3//jEsWFrNxvyTTIFEWFlhIoQkbuZVCMwhNSjKRjRUL5FIjasYtUmTBQtiwomxQlFuRDJpIodwdnem8+uab73vfd76amYWzfc55fs85z3P+5xF9ZOojLrnAZjYAmAHUAMOAt8Bz4K6kH5UcPhVsZmOB/cAiYFAJwFfgMrBd0uvuHKAs2Mw2AwcBzzbLvgMbJZ3KckzWS4LNzLPcFk6/gGPATeAJ8AIYD0wE5gIbgH7hu0vSnjzwLmAz2wQcjWC/x4WSnpbbzMymAleBkeGzQtKFLHgnsJlNAh4A/SO72ZLeZ21iZqOA28Bo4AtQK+lNWlwx+DowH/CX6sEvs6DJuplNA+5BR6eckbQmF9jMqoEP4XxI0ta80AL4eWAl8AmolvS73B7/MjazpcDFcJwp6U4F4GVAcr+pexSCtwCHAzZE0ucKwOPi1XvoWkmn82S8E0haoSqtTCkvfCDwLdabJO3LA/Z+PB6OwyW9qyDjEUBbxC2XlFxdl60KSz0PuBEedZKuVQBeDFyJuCmSHuXJeDDwMSSyRdL6CsBngVWAubanDZDiPr4ELAH+AJMluUTmsujj++HcKmldrj52JzNzDfby+CRyuZwlqT2LbGZjQrlcNl0LaiR59cpaKa1uAFoi4hWwQNLjlJc8PbR6aPg0S2rMOmy56bQX2BHBPp18aNwqmE61fhXAHMBLWrxPg6QT3co4cY4pdQSoyjo98DM+BK5+iaXCs34gfucHgDrAxaHYXItPArsltZlZPdCaB573z+VQ/3NNiD+XT61nwENJiVJ18ErA6yX54TpZLnCOUndyCbg/UN/fW3O1pHOFTj0CLsg8gTdKau4VcMBd/bynm3ql1HmupsdKnQX//8B/AfNL4h+zXvQHAAAAAElFTkSuQmCC"
+          />
+
+          <input
+            type="search"
+            name="searchValue"
+            id="searchValue"
+            placeholder="search concert"
+          />
+        </div>
+        <div class="filters">
+          <div class="filter">
+            <img
+              src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeCAYAAAA7MK6iAAAAAXNSR0IArs4c6QAAAK5JREFUSEvtlsENwyAMRf/foCNkhI7QTpZ0smaEjpARusGPuEUkDTZCdQ5Y4oKMn3mABBEUDOKig/9mvquOVS3p0bIDknNe7/CMJakxeMe5HDhGdUvNv2oV37GkG4C7s5kPye/ZGgs4aX87wc+jm7ytcWlwjGqnYnN6UXVeSdIAII1tLCQXMxXwfwQkTQDGDPIimebNUbPjMHCMarPLQqJbdQfXGuiqa82514WpXgGHQDgfNSRaiAAAAABJRU5ErkJggg=="
+            />
+          </div>
+          <img
+            id="searchBtn"
+            src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeCAYAAAA7MK6iAAAAAXNSR0IArs4c6QAAAmBJREFUSEvl1kuoT1EUx/HPzTMDAxPvRyKPRBkYYCCFhIm8SiGv0E1JRCZGDJBHEeUdKTJgIEwYUSYoyqtIXokUyvvR0v7r+Lv/c87913UH1ux01l7fvdbe67d2g1ayhlbiKgtuj1EYiG54jge4hs/1bL4I3BdbMRUdmwB8wBmswZPmbCAPvALbEdkW2Scsw+Eix8r/WuDIcnVy+oq9uIS7eIj+GIzxWIo2yXcDNpWBNwVejj1pcZzjFNzLCTYc59Az+czGySJ4NXgIbqJdym4sXhUFQS9cQW+8xyA8y1tXDb6AiemmxuJHJaAVlxG4zq9OOYr5ZcFd8Do578CqZkArricwB28R8b7VipHNeAZOJcfRuFoHeGbmfHNjZMErsTPBOuNdHeB+6dbH0gU4Uibj9ZlWaJtXppwNdcDH9H8ttpQBRz/uS47d8aKOjHvgaVo3K3N0f4XKlnoCLiaPyThfB3gazqZ1w3C7TMad8CZJ5H4sqQN8DHPxI2l7zQFS3cenMR3fMTSJSFl+9PGN5HwAi8v2cfiFBkd5YhKFXI7ByxLkPkm5QjZDC2J8RvVqWlNavQhR6rDHmIQ7OTFGJq3umnx2o7Fos7Wm02asS4tjOsXQuJyZTiGncRTjUkmr48TmDzY344p/TKldiJ4usi/pQRDqV7FceNELJM58G6K9QhyqLbT4EDam/l2IuFiF8CJwJUBA4801IL25Ymrdx62MUlV8q+HxHZv7w8qCi0pd/T9gcUEjfrTmPBzPOrUUOBhZeNzyuO2/rSXBAQn1i56OgfFPSl14NC2dcc0N/H/gn1afbR89JErzAAAAAElFTkSuQmCC"
+          />
+        </div>
+      </div>
+
+      <div id="result"></div>
+      <div class="footer">
+        Made By <a href="https://iqrafarah.nl/" target="_blank">Iqra Farah</a>
+      </div>
+    </div>
+  </body>
+</html>
